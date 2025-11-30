@@ -12,6 +12,11 @@ body{
     overflow-x: hidden;
     
 }
+.container{
+    display: flex;
+    width: 100vw;
+    min-height: 100vh;
+}
 
 .sidebar {
     width: 250px;
