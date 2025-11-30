@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
      <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -12,31 +12,39 @@
 </head>
 <body>
     <div class="container">
-      <section class="barraContainer">
-         <nav class="barraheader">
-            <div class="logoContainer">
-                 <i class="fa-solid fa-seedling"></i>
-            </div>
-                <h1 class="nome">AgroTech</h1>
-</nav>
-            <div class="menu">
-                <ul>
-                    <li><a href="#" id="ativo">
-                        <i class="fa-solid fa-table-columns"></i>Home</a></li>
-                    <li><a href="#">
-                        <i class="fa-solid fa-chart-line"></i>Relatórios</a></li>
-                    <li><a href="#">
-                        <i class="fa-solid fa-bell"></i> About</a></li>
-                    <li><a href="#">
-                        <i class="fa-solid fa-gear"></i> Contact</a></li>
-                </ul>
-            </div>
-         
-    </section>
+
+        <aside class="sidebar">
+        <div class="logo">
+            <i class="fa-solid fa-seedling"></i>
+            <h2>AgroTech</h2>
+        </div>
+
+        <ul class="menu">
+            <li class="active">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Relatórios</span>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-bell"></i>
+                <span>About</span>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-gear"></i>
+                <span>Contact</span>
+            </li>
+        </ul>
+    </aside>
           <div class="content">
             <div class="headerContent">
                 <h2>Monitoramento da plantação de Trigo</h2>
-                <p>Bem-vindo ao sistema de monitoramento agrícola AgroTech. Aqui você pode acompanhar em tempo real as condições da sua plantação de trigo, incluindo temperatura, umidade do solo e níveis de irrigação.</p>
+                <p> Sistema de monitamento da plantação de trigo - medindo temperatura, umidade do solo e níveis de irrigação.</p>
                 </div>
           <div class="containerCards" id="container-cards">
                
@@ -48,10 +56,10 @@
     <script>
 
         const medidas =[
-            {titulo: 'Temperatura', valor: 22, unidade: '°C'},
-            {titulo: 'Umidade do Solo', valor: 75, unidade: '%'},
-            {titulo: 'Nível de Irrigação', valor: 60, unidade: '%'},
-            {titulo: 'pH', valor: 6.1, unidade: 'pH'},
+            {titulo: 'Temperatura', valor: 22, unidade: '°C', icone : 'fa-solid fa-temperature-high'}, 
+            {titulo: 'Umidade do Solo', valor: 75, unidade: '%', icone : 'fa-solid fa-droplet'},
+            {titulo: 'Nível de Irrigação', valor: 60, unidade: '%', icone : 'fa-solid fa-shower'},
+            {titulo: 'pH', valor: 6.1, unidade: 'pH', icone : 'fa-solid fa-flask-vial'},
 
         ];
  const container = document.getElementById('container-cards');
@@ -65,7 +73,7 @@
                  <div class="card">
                     <div class="cardheader">
                         <div class="icone">
-                            <i class="fa-solid fa-droplet"></i>
+                            <i class="${medida.icone}"></i>
                         </div>
                         <h3>${medida.titulo}</h3>
 
