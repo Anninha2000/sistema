@@ -8,13 +8,15 @@ body{
     color: #ffffff;
     font-family: 'Inter', sans-serif;
     background: linear-gradient(135deg,#3a4372 0%, #434f8f 50%, #0a0e27 100%);
-      
+    min-height: 100vh;
+    overflow-x: hidden;
+    
 }
 
 .container{
     display: flex;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
 }
 .barraContainer {
     display: flex;
